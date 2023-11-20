@@ -1,0 +1,5 @@
+Links to wine data.
+
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/f2phrrowvyz3432kz42tm2ysrug6zq?dws=00000')
+df = pd.read_csv('https://query.data.world/s/zqfvsmjl4vn65wdivrxcfqwfdrl2kz?dws=00000')
