@@ -98,7 +98,7 @@ def prepare_wine(red_wine_url, white_wine_url, filename='wines.csv'):
         df = df.rename(columns=rename_dict)
  
         # Categorize the quality column
-        df['quality_category'] = df['quality'].apply(categorize_quality)
+        df['wine_quality'] = df['quality'].apply(categorize_quality)
 
         # Save the processed DataFrame to CSV
         df.to_csv(filename)
