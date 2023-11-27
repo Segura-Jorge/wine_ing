@@ -29,11 +29,11 @@ def load_and_prepare_wine_data(red_wine_url, white_wine_url):
  
 def categorize_quality(quality):
     if quality in [3, 4]:
-        return 'Low'
-    elif quality in [5, 6, 7]:
-        return 'Average'
-    else:  # for quality 8 and 9
-        return 'High'
+        return 'low'
+    elif quality in [5, 6]:
+        return 'average'
+    else:  # for quality 7, 8 and 9
+        return 'high'
 
     
 def prepare_wine(df):
@@ -59,11 +59,11 @@ import os
 def prepare_wine(red_wine_url, white_wine_url, filename='wines.csv'):
     def categorize_quality(quality):
         if quality in [3, 4]:
-            return 'Low'
-        elif quality in [5, 6, 7]:
-            return 'Average'
-        else:  # for quality 8 and 9
-            return 'High'
+            return 'low'
+        elif quality in [5, 6]:
+            return 'average'
+        else:  # for quality 7, 8 and 9
+            return 'high'
 
     if os.path.isfile(filename): 
         # Load the DataFrame from CSV if it already exists
