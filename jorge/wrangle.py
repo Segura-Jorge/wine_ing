@@ -56,14 +56,7 @@ import pandas as pd
 import os
 
 def prepare_wine(red_wine_url, white_wine_url, filename='wines.csv'):
-    def categorize_quality(quality):
-        if quality in [3, 4]:
-            return 'low'
-        elif quality in [5, 6]:
-            return 'average'
-        else:  # for quality 7, 8 and 9
-            return 'high'
-
+    
     if os.path.isfile(filename): 
         # Load the DataFrame from CSV if it already exists
         df = pd.read_csv(filename, index_col=0)
@@ -95,9 +88,6 @@ def prepare_wine(red_wine_url, white_wine_url, filename='wines.csv'):
                 }
 
         df = df.rename(columns=rename_dict)
- 
-        # Categorize the quality column
-        df['wine_quality'] = df['quality'].apply(categorize_quality)
 
         # Save the processed DataFrame to CSV
         df.to_csv(filename)
