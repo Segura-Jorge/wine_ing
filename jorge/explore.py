@@ -98,7 +98,7 @@ def preprocess_wine(df):
     df = pd.concat([df, color_dummies], axis=1)
     
     # Create dummy variables for the 'wine_quality' column
-    quality_dummies = pd.get_dummies(df['wine_quality'], drop_first=True).astype(int)
+    quality_dummies = pd.get_dummies(df['wine_quality'], drop_first=False).astype(int)
     # Add the dummy variables to the DataFrame
     df = pd.concat([df, quality_dummies], axis=1)
     
