@@ -36,22 +36,21 @@ def categorize_quality(quality):
         return 'high'
 
     
-def prepare_wine(df):
-    '''
-    This function takes in a dataframe 
-    Creates a column that bins quality of the wines into 3 groups
-    Then returns a cleaned dataframe
-    '''
-#     filename = 'wines.csv'
-    
-#     if os.path.isfile(filename): 
-#         df = pd.read_csv(filename, index_col=0)
-#         return df
-#     else:
-#         df = load_and_prepare_wine_data(red_wine_url, white_wine_url)
-
-#         df.to_csv(filename)
-#     return df
+# def prepare_wine(df):
+#     '''
+#     This function takes in a dataframe 
+#     Creates a column that bins quality of the wines into 3 groups
+#     Then returns a cleaned dataframe
+#     '''
+#      filename = 'wines.csv'
+   
+#      if os.path.isfile(filename): 
+#          df = pd.read_csv(filename, index_col=0)
+#          return df
+#      else:
+#          df = load_and_prepare_wine_data(red_wine_url, white_wine_url)
+#          df.to_csv(filename)
+#      return df
 
 import pandas as pd
 import os
